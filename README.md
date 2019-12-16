@@ -34,4 +34,4 @@ This project focuses on bootstrap theming and handlebars templating. Use it as a
 - Come up with a better management for webpack.dev.js and webpack.prod.js, to make sure shared settings are kept in sync. Probably create a general config file with the shared settings.
 - Configuration for assets, like images.
 - HMR for templates, if possible
-- Add .browserslistrc
+- Add `.browserslistrc`
