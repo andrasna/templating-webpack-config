@@ -1,8 +1,7 @@
 {
-  "name": "static-site-generator-webpack",
+  "name": "templating-webpack-config",
   "version": "1.0.0",
   "description": "",
-  "private": true,
   "scripts": {
     "start": "webpack-dev-server --hot --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
