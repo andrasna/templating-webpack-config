@@ -16,7 +16,7 @@ This project focuses on bootstrap theming and handlebars templating. Use it as a
 
 `npm run build`
 
-# Features (all under review)
+# Features (all currently under review)
 
 - Handlebars tempating
 - Webpack Dev Server
