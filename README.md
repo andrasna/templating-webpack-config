@@ -18,7 +18,7 @@ This project focuses on bootstrap theming and handlebars templating. Use it as a
 
 # Features (all currently under review)
 
-- Handlebars tempating
+- Handlebars templating
 - Webpack Dev Server
 - Webpack HMR for CSS
 - Live reloading for template files
