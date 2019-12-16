@@ -26,7 +26,7 @@ This project focuses on bootstrap theming and handlebars templating. Use it as a
 - Generate critical CSS on build 
 - A starter CSS/JS for bootstrap theming
 - CSS and JS linting during development and build
-- Autoprefixer (add other PostCSS plugins to `postcss.config.js`)
+- Autoprefixer
 
 ## TODO
 
