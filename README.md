@@ -1,1 +1,1 @@
-# templating-webpack-config
+# How to use
