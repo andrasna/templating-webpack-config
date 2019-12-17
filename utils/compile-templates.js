@@ -10,6 +10,7 @@ function compileTemplates(pagesAbsPath) {
       new HtmlWebpackPlugin({
         filename: `${basename}.html`,
         template: `${pagesAbsPath}/${basename}.hbs`,
+        templateParameters: require('../site-data.json'),
       })
     )
   })

@@ -1,0 +1,13 @@
+{
+  "siteTitle": "Site Name",
+  "pageTitles": {
+    "home": "Hello World",
+    "services": "Our services",
+    "contact": "Let's get in touch"
+  },
+  "lorem": {
+    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "excerpt": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis doloribus hic eum ex sint perspiciatis minus explicabo minima? Minus quisquam ad sequi cupiditate quos mollitia voluptates laboriosam numquam architecto esse?",
+    "article": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis dictum volutpat. Vestibulum pulvinar risus a viverra sagittis. Aliquam sit amet mauris luctus, aliquam diam at, tristique lectus. Nam aliquam dui porttitor congue gravida. Aenean id dapibus lorem. Donec finibus purus et dui molestie dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque ornare nulla arcu, eget molestie tortor pretium vel. Suspendisse id libero eu augue suscipit porttitor. Maecenas quis odio magna. Nam felis lectus, eleifend ut dui hendrerit, laoreet placerat lectus. Integer tincidunt bibendum feugiat. Donec venenatis ligula id lacus vulputate, a tempus leo pretium. Sed mollis mollis metus, et feugiat tellus scelerisque ornare. "
+  }
+}
