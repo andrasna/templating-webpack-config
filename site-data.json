@@ -1,8 +1,7 @@
 {
-  "siteTitle": "Bootstrap theming & handlebars templating",
   "pageTitles": {
-    "home": "About us",
-    "services": "Our services",
+    "home": "Bootstrap theming & handlebars templating",
+    "about": "About us",
     "contact": "Let's get in touch"
   },
   "lorem": {
