@@ -8,19 +8,20 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 
 const paths = {
-  src: path.join(__dirname, 'src'),
-  public: path.join(__dirname, 'public'),
+  assets: path.join(__dirname, 'assets'),
+  dist: path.join(__dirname, 'dist'),
+  layouts: path.join(__dirname, 'layouts'),
   pages: path.join(__dirname, 'layouts/pages'),
 }
 
 module.exports = {
   mode: 'production',
   entry: {
-    main: `${paths.src}/js/main.js`,
-    bootstrap: `${paths.src}/js/bootstrap.js`,
+    main: `${paths.assets}/js/main.js`,
+    bootstrap: `${paths.assets}/js/bootstrap.js`,
   },
   output: {
-    path: paths.public,
+    path: paths.dist,
     filename: '[name].js',
   },
   module: {
@@ -62,7 +63,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlCriticalWebpackPlugin({
-      base: paths.public,
+      base: paths.dist,
       src: 'index.html',
       dest: 'index.html',
       inline: true,
@@ -77,11 +78,11 @@ module.exports = {
       ignoreOrder: false,
     }),
     new PurgecssPlugin({
-      paths: glob.sync(`${paths.pages}/**/*`,  { nodir: true }),
+      paths: glob.sync(`${paths.dist}/**/*`,  { nodir: true }),
     }),
     ...compileTemplates(paths.pages),
     new StyleLintPlugin({
-      files: `src/scss/**/*.scss`,
+      files: `assets/scss/**/*.scss`,
     }),
   ],
 }

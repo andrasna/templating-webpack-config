@@ -3,8 +3,8 @@ const compileTemplates = require('./utils/compile-templates.js')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 const paths = {
-  src: path.join(__dirname, 'src'),
-  public: path.join(__dirname, 'public'),
+  assets: path.join(__dirname, 'assets'),
+  dist: path.join(__dirname, 'dist'),
   pages: path.join(__dirname, 'layouts/pages'),
 }
 
@@ -14,16 +14,16 @@ module.exports = {
   watch: true,
   devServer: {
     stats: 'minimal',
-    contentBase: path.resolve(__dirname, './layouts'),
+    contentBase: path.join(__dirname, 'layouts'),
     watchContentBase: true,
     open: true,
   },
   entry: {
-    main: `${paths.src}/js/main.js`,
-    bootstrap: `${paths.src}/js/bootstrap.js`,
+    main: `${paths.assets}/js/main.js`,
+    bootstrap: `${paths.assets}/js/bootstrap.js`,
   },
   output: {
-    path: paths.public,
+    path: paths.dist,
     filename: '[name].js',
   },
   module: {
@@ -72,7 +72,7 @@ module.exports = {
     ...compileTemplates(paths.pages),
     new StyleLintPlugin({
       failOnError: false,
-      files: './src/**/*.scss',
+      files: './assets/**/*.scss',
     }),
   ],
 }
