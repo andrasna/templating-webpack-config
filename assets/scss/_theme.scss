@@ -1,0 +1,14 @@
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: (
+  "theme-1":      #bf814b,
+  "theme-2":      #493e3e,
+  "theme-3":      #1fafbf,
+  "theme-4":      #362b2b,
+  "theme-5":      #82b8d9,
+);
+
+$spacer: 1.5rem !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: (
+  6: ($spacer * 4),
+);
