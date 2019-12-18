@@ -3,6 +3,7 @@
 // https://getbootstrap.com/docs/4.4/getting-started/theming/
 @import "theme";
 
+
 // Option A: Include all of Bootstrap
 
 // @import "~bootstrap/scss/bootstrap";
@@ -35,7 +36,7 @@
 // @import "~bootstrap/scss/card";
 // @import "~bootstrap/scss/breadcrumb";
 // @import "~bootstrap/scss/pagination";
-// // @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/badge";
 // @import "~bootstrap/scss/alert";
 // @import "~bootstrap/scss/progress";
 // @import "~bootstrap/scss/list-group";
@@ -65,6 +66,7 @@
 @import "~bootstrap/scss/utilities/spacing";
 @import "~bootstrap/scss/utilities/text";
 // @import "~bootstrap/scss/utilities/visibility";
+
 
 // Custome modules
 // @import "example-module";
