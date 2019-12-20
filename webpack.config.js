@@ -11,13 +11,7 @@ module.exports = (mode) => {
   const isDevMode = (mode === 'development') ? true : false
   const config = {}
 
-  config.stats = {
-    modules: false,
-    assets: false,
-    hash: false,
-    children: false,
-    entrypoints: false,
-  }
+
   
   config.entry = {
     main: `${paths.assets}/js/main.js`,
@@ -30,11 +24,21 @@ module.exports = (mode) => {
   }
 
   if (isDevMode) {
-    config.devtool = 'source-map' 
+    config.devtool = 'eval-source-map' 
+
     config.watch = true
+
     config.devServer = {
       contentBase: paths.layouts,
       watchContentBase: true,
+    }
+
+    config.stats = {
+      modules: false,
+      assets: false,
+      hash: false,
+      children: false,
+      entrypoints: false,
     }
   }
 
@@ -57,9 +61,6 @@ module.exports = (mode) => {
             'postcss-loader',
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
           },
         ],
       },
