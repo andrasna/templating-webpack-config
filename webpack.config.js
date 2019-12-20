@@ -44,7 +44,7 @@ module.exports = (mode) => {
         test: /\.(scss)$/,
         use: [
           ...(!isDevMode ? [
-            { loader: MiniCssExtractPlugin.loader }
+            MiniCssExtractPlugin.loader
           ] : []),
           ...(isDevMode ? [{ loader: 'style-loader' }
           ] : []),
@@ -54,16 +54,7 @@ module.exports = (mode) => {
               sourceMap: true,
             },
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: function () {
-                return [
-                  require('autoprefixer'),
-                ];
-              }
-            }
-          },
+            'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
