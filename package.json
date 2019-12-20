@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This project focuses on bootstrap theming and handlebars templating. Use it as an example. It may help you configure some of the packages utilized in this setup.",
   "scripts": {
-    "start": "webpack-dev-server --hot --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "webpack-dev-server --hot --mode development --env development",
+    "build": "webpack --mode production --env production"
   },
   "author": "Andras Nagy",
   "license": "ISC",
