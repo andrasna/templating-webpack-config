@@ -33,4 +33,3 @@ This project focuses on bootstrap theming and handlebars templating. Use it as a
 - The build process relies on the [html-critical-webpack-plugin](https://github.com/anthonygore/html-critical-webpack-plugin.git) and  [purgecss-webpack-plugin](https://github.com/FullHuman/purgecss-webpack-plugin.git) packages. Their integration into the build process has not been fully tested.
 - Configuration for assets, like images.
 - HMR for templates, if possible.
-- Add `.browserslistrc`.
