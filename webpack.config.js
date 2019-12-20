@@ -23,11 +23,14 @@ module.exports = (mode) => {
 
   if (isDevMode) {
     config.devtool = 'eval-source-map' 
+
     config.watch = true
+
     config.devServer = {
       contentBase: paths.layouts,
       watchContentBase: true,
     }
+
     config.stats = {
       modules: false,
       assets: false,
