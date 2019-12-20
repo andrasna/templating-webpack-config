@@ -10,8 +10,6 @@ const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 module.exports = (mode) => {
   const isDevMode = (mode === 'development') ? true : false
   const config = {}
-
-
   
   config.entry = {
     main: `${paths.assets}/js/main.js`,
@@ -25,14 +23,11 @@ module.exports = (mode) => {
 
   if (isDevMode) {
     config.devtool = 'eval-source-map' 
-
     config.watch = true
-
     config.devServer = {
       contentBase: paths.layouts,
       watchContentBase: true,
     }
-
     config.stats = {
       modules: false,
       assets: false,
@@ -50,7 +45,8 @@ module.exports = (mode) => {
           ...(!isDevMode ? [
             MiniCssExtractPlugin.loader
           ] : []),
-          ...(isDevMode ? [{ loader: 'style-loader' }
+          ...(isDevMode ? [
+            'style-loader'
           ] : []),
           {
             loader: 'css-loader',
