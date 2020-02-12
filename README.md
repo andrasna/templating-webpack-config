@@ -26,3 +26,4 @@ This project focuses on bootstrap theming and handlebars templating. Use it as a
 - A starter CSS/JS for bootstrap theming
 - CSS and JS linting
 - Autoprefixer
+- PurgeCSS (remove unused CSS)
