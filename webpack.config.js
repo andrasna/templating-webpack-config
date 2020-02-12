@@ -1,11 +1,9 @@
-const paths = require('./build/paths')
-const compileTemplates = require('./build/compile-templates')
-const glob = require('glob')
+const paths = require('./helpers/paths')
+const compileTemplates = require('./helpers/compile-templates')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
-const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
+const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin")
 
 module.exports = (mode) => {
   const isDevMode = (mode === 'development') ? true : false
@@ -49,7 +47,7 @@ module.exports = (mode) => {
             MiniCssExtractPlugin.loader
           ] : []),
           ...(isDevMode ? [
-            'style-loader'
+          'style-loader'
           ] : []),
           {
             loader: 'css-loader',
@@ -57,7 +55,7 @@ module.exports = (mode) => {
               sourceMap: true,
             },
           },
-            'postcss-loader',
+          'postcss-loader',
           {
             loader: 'sass-loader',
           },
@@ -78,6 +76,7 @@ module.exports = (mode) => {
   config.plugins = [
     ...(!isDevMode ? [
       new CleanWebpackPlugin(),
+      ...compileTemplates(paths.pages),
       new HtmlCriticalWebpackPlugin({
         base: paths.dist,
         src: 'index.html',
@@ -93,14 +92,13 @@ module.exports = (mode) => {
         chunkFilename: '[id].css',
         ignoreOrder: false,
       }),
-      new PurgecssPlugin({
-        paths: glob.sync(`${paths.dist}/**/*`,  { nodir: true }),
+    ] : [
+      ...compileTemplates(paths.pages),
+      new StyleLintPlugin({
+        context: `${paths.site}/assets/scss`,
+        files: `**/*.scss`,
       }),
-    ] : []),
-    ...compileTemplates(paths.pages),
-    new StyleLintPlugin({
-      files: `assets/scss/**/*.scss`,
-    }),
+    ]),
   ]
 
   return config
