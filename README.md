@@ -16,20 +16,13 @@ This project focuses on bootstrap theming and handlebars templating. Use it as a
 
 `npm run build`
 
-## Features
+## Config includes 
 
 - Handlebars templating
 - Webpack Dev Server
 - Webpack HMR for CSS
 - Live reloading for template files
-- Remove unused CSS on build
 - Generate critical CSS on build 
 - A starter CSS/JS for bootstrap theming
-- CSS and JS linting during development and build
+- CSS and JS linting
 - Autoprefixer
-
-## TODO
-
-- The build process relies on the [html-critical-webpack-plugin](https://github.com/anthonygore/html-critical-webpack-plugin.git) and  [purgecss-webpack-plugin](https://github.com/FullHuman/purgecss-webpack-plugin.git) packages. Their integration into the build process has not been fully tested.
-- Configuration for assets, like images.
-- HMR for templates, if possible.
